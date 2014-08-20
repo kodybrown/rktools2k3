@@ -1,0 +1,42 @@
+; ClusFilePort.INF
+;
+; Print Port monitor that provides support for FILE: and filename ports on Clustered Print servers
+;
+
+[Version]
+Signature="$Windows NT$"
+Provider=%MS%
+ClassGUID={4D36E979-E325-11CE-BFC1-08002BE10318}
+Class=Printer
+DriverVer=07/26/2002,5.1.3663.0
+
+;;
+;; DefaultInstall allows right-click Install, but requires spooler restart
+;;
+;; [DefaultInstall]
+;; CopyFiles      = @ClusFilePort.dll
+
+
+;; To install a port monitor, open the Printers folder in the Control Panel.
+;; On the Printers folder's File menu, select Server Properties.
+;; On the File Server Properties dialog, click the Ports tab, and then click the Add Port... button.
+;; On the Printer Ports dialog, click the New Port Type... button.
+;; Type the path to the INF file in the text input box, and then click OK
+;;
+[PortMonitors]
+%MonitorName%  = ClusFilePort
+
+[ClusFilePort]
+CopyFiles      = @ClusFilePort.dll
+PortMonitorDll = ClusFilePort.dll
+
+[DestinationDirs]
+DefaultDEstination=
+
+;
+; Localizable Strings
+;
+[Strings]
+MS="Microsoft Windows Print Team"
+MonitorName="Cluster File Ports"
+

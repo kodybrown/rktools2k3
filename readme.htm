@@ -1,0 +1,1064 @@
+<HTML DIR="LTR">
+
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=windows-1252">
+<META http-equiv="MSThemeCompatible" content="Yes">
+<META name="MS-HAID" content="a_readme">
+<META name="MS.LOCALE" content="EN-US">
+<META name="DESCRIPTION" loccontent="Release Notes">
+<TITLE>Release Notes (Readme.htm) - Microsoft Windows Resource Kit Tools</TITLE>
+<STYLE>
+
+body    		{ color: #000000;
+		background: #FFFFFF;  	
+		font-size: 75%;    		
+		font-family: Verdana, Arial, Sans Serif; }
+
+
+a:link, a:visited 	{ color: "#0000FF"; text-decoration:"underline";}
+
+a:active, a:hover 	{ color: "#FF0000";  cursor:hand; text-decoration:"underline";}
+
+h1
+		{ font-size: 125%; 
+		margin-bottom:" .5em"; clear:both; }
+
+h2
+		{ font-size: 110%;  
+		margin-top: "1.5em";
+		margin-bottom:" .5em"; clear:both; }
+
+h3
+		{ font-size: 100%; 
+		margin-top: "1.2em";  
+		margin-bottom: ".5em"; clear:both; }
+
+
+p
+		{ margin-top:" .6em"; 
+		margin-bottom: ".6em"; }
+			
+ol
+		{ margin-top: ".5em"; 
+		margin-bottom: 0; 
+		margin-left: "2.1em"; 
+		padding-left: "0em";
+		margin-right:"2.1em" }
+	
+ul
+		{ margin-top: ".6em"; 	
+		margin-bottom: 0;
+		list-style-type: disc;
+		margin-left: "1.5em";
+		padding-left: "0em";
+		margin-right: "1.5em"; }
+		
+li
+		{ margin-bottom: ".7em"; clear:both; }
+		
+p.indent		{ margin-left: "2em"; }    
+
+		
+p.proclabel	{ font-size: 100%; 	
+		font-weight: bold; clear: both; }
+		
+		
+table
+		{ font-size: 100%;
+		margin-top: "1em"; 
+		margin-bottom: "1em"; }
+		
+th
+		{ text-align: left;
+		background: #DDDDDD;
+		vertical-align: bottom;
+		padding: .2em;
+		padding-left: .45em;
+		padding-right: .5em;}
+		
+tr
+		{ vertical-align: top; }
+
+td
+		{ background: #EEEEEE;
+		vertical-align: top;
+		padding: .2em;
+		padding-left: .45em;
+		padding-right: .5em;}
+		pre
+		{ margin-top: ".5em";
+		margin-bottom: ".5em"; }
+
+code
+		{ font-family: Courier New; 
+		font-size: "1.1em"; }
+</STYLE>
+</HEAD>
+
+<BODY>
+
+<H1>Release Notes (Readme.htm)<BR>
+Microsoft Windows Resource Kit Tools</H1>
+
+<P>This document contains important information that is not included in Help for the Microsoft&reg; Windows&reg; Resource Kit Tools, including how to install the tools, along with important updates and corrections.</P>
+
+<HR>
+
+<H2>Contents</H2>
+
+<P><A href="#about">About the Tools</A></P>
+<P><A HREF="#setup">Setup for the Resource Kit Tools</A></P>
+	<P CLASS="indent"><A HREF="#general">General Setup Instructions</A></P>
+	<P CLASS="indent"><A HREF="#install">Installing from the Command Prompt</A></P>
+	<P CLASS="indent"><A HREF="#unattend">Unattended Installation</A></P>
+<P><A HREF="#former">Former Resource Kit Tools Now Included in the Support Tools or Operating System</A></P>
+	<P CLASS="indent"><A HREF="#suptools">Support Tools</A></P>
+	<P CLASS="indent"><A HREF="#os">Operating System</A></P>
+<P><A HREF="#resource">Resource Kit Support Policy</A></P>
+<P><A HREF="#tools">Individual Tool Release Notes</A></P>
+	<P CLASS="indent"><A HREF="#Acctinfo">Acctinfo.dll: Additional Account Information Properties Page</A></P>
+	<P CLASS="indent"><A HREF="#custreasonedit">Custreasonedit.exe: Custom Reason Editor</A></P>
+	<P CLASS="indent"><A HREF="#dnsdiag">Dnsdiag.exe: DNS Resolver Tool</A></P>
+	<P CLASS="indent"><A HREF="#lockoutstatus">Lockoutstatus.exe: Account Lockout Status</A></P>
+	<P CLASS="indent"><A HREF="#regview">Regview.exe: Registry Viewer Tool</A></P>
+	<P CLASS="indent"><A HREF="#timeit">Timeit.exe</A></P>
+
+<HR>
+
+<H2><A NAME="about">About the Tools</A></H2>
+
+<P>The Windows Resource Kit Tools are intended to assist experienced users in diagnosing and resolving computer problems, and to enhance the management capabilities of the operating system. For tools documentation, see Windows Resource Kit Tools Help (Rktools.chm).</P>
+
+<P>For the most current information about the Windows Resource Kit Tools, see the <A ID="MSUrl" HREF="http://go.microsoft.com/fwlink/?LinkId=286" TARGET="_new">Windows Deployment and Resource Kits</A> Web site.</P>
+
+<HR>
+
+<H2><A NAME="setup">Setup for the Resource Kit Tools</A></H2>
+
+<P>The Windows Resource Kit Tools are located in the \Rktools folder of the <I>Windows Server&nbsp;2003 Deployment Kit</I> companion&nbsp;CD. Rktools.msi, a Windows Installer package, installs all of the Resource Kit Tools and documentation onto your computer's hard disk.</P>
+
+
+<P CLASS="alert"><B>Important</B></P>
+<P CLASS="indent">These tools have not been localized: they are written and tested in English only. Using these tools with a different language version of the operating system can produce unpredictable results.</P>
+
+
+<H3><A NAME="general">General Setup Instructions</A></H3>
+
+<P>The Windows Resource Kit Tools can be installed on computers running the Windows Server&nbsp;2003 or the Windows&nbsp;XP Professional operating systems. The Resource Kit Tools Setup program cannot be used to upgrade previous versions of the Resource Kit Tools.</P>
+
+<P CLASS="proclabel">Installing the Windows Resource Kit Tools</P>
+
+
+<P CLASS="alert"><B>Important</B></P>
+<P CLASS="indent">It is highly recommended that you remove all previous versions of the Resource Kit Tools, including beta versions, before running the Resource Kit Tools Setup program.</P>
+
+
+<OL>
+
+<LI>Insert the <I>Microsoft Windows Server&nbsp;2003 Deployment Kit</I> companion CD in your CD drive.</LI>
+
+<LI>Click <b>Install the Resource Kit Tools</b>.</LI>
+
+</OL>
+
+<P>Setup installs Windows Resource Kit Tools files onto your hard disk. A typical installion requires 37&nbsp;megabytes (MB) of free space.</P>
+
+<P>By default, Setup installs the tool files into the \Program Files\Windows Resource Kits\Tools folder, although it allows you to choose another location. However, Setup installs Tools Help (Rktools.chm) into \<NOBR>%windir%</NOBR>\Help regardless of where you choose to install the tool files.</P>
+
+<P>Setup also adds the folder \Program Files\Windows Resource Kits\Tools (or the folder name you choose for installing the tools) to your computer's system PATH statement. </P>
+
+<P>Setup creates a <B>Programs</B> | <B>Windows Deployment and Resource Kits</B> | <B>Windows Resource Kits</B> | <B>Tools</B> folder on the <B>Start</B> menu. The folder contains shortcuts to the command shell, Tools Help, and Tools Help Readme.</P>
+
+<P>To find the Windows Resource Kit Tools Help in Help and Support Center, on the Help and Support Center home page, under <B>Support Tasks</B> click <B>Tools</B>.</P>
+
+<P>Some Resource Kit Tools require separate or additional setup besides the steps described earlier. For more information about each of these tools and others with additional requirements, see Windows Resource Kit Tools Help (Rktools.chm).</P>
+
+
+<P CLASS="alert"><B>Note</B></P>
+<P CLASS="indent">On the <I>Windows Server&nbsp;2003 Deployment Kit</I> companion CD, the tools are included in the Rktools.msi file. You cannot run executable files, call other binaries, or open documentation directly from an .msi file. Be aware also that for some tools, the Resource Kit Setup program or the tool's own Setup program performs other installation procedures such as making changes in the registry. You must first install the tools on your hard disk with Resource Kit Tools Setup before running them.</P>
+
+
+<H3><A NAME="install">Installing from the Command Prompt</A></H3>
+
+<P>You can install the Windows Resource Kit Tools from the command prompt. For example, to install the Resource Kit Tools in the default directory, insert the <I>Windows Server&nbsp;2003 Deployment Kit</I> companion CD in your CD drive and type the following at the command prompt:</P>
+
+<PRE><B>msiexec /i</B> <I>cd_drive_letter</I><B>:\rktools\rktools.msi</B></PRE>
+
+<P>where <I>cd_drive_letter</I><B>:</B> is the letter indicating the CD drive (for example, <B>d:</B>).</P>
+
+<P>For more information about the syntax of the Windows Installer client-side installer service (Msiexec.exe), search for &quot;msiexec&quot; in Help and Support Center.</P>
+
+<H3><A NAME="unattend"></A>Unattended Installation</H3>
+<p>To perform an unattended installation of the Windows Resource Kit Tools, insert the <I>Windows Server&nbsp;2003 Deployment Kit</I> companion CD in your CD drive and type the following at the command prompt:</P>
+
+<PRE><B>msiexec /i</B> <I>cd_drive_letter</I><B>:\rktools\rktools.msi /q</B></PRE>
+
+<P>where <I>cd_drive_letter</I><B>:</B> is the letter indicating the CD drive (for example, <B>d:</B>).</P>
+
+<HR>
+
+<A NAME="former"></A><H2>Former Resource Kit Tools Now Included in the Support Tools or Operating System</H2>
+
+<P>A number of tools that shipped in previous versions of the Windows Resource Kits are now included in the Windows Support Tools or in the Windows Server&nbsp;2003 operating system.</P>
+
+<A NAME="suptools"></A><H3>Support Tools</H3>
+
+<P>The following former Windows Resource Kit Tools are now included in the Support Tools for Windows Server&nbsp;2003 and Windows&nbsp;XP, which are located in the \Support\Tools folder of the operating system CD but must be installed separately from the operating system. Support Tools Help (Suptools.chm) is installed with the Support Tools.</P>
+
+<TABLE>
+<TR>
+<TH>Tool</TH>
+<TH>Description</TH>
+</TR>
+<TR>
+<TD>Addiag.exe: Application Deployment Diagnosis</TD>
+<TD>Provides information about the current state of software that is either installed or available for installation on a computer managed by IntelliMirror&reg; Software Installation and Maintenance.</TD>
+</TR>
+<TR>
+<TD>Dhcploc.exe: DHCP Server Locator Utility</TD>
+<TD>Displays DHCP servers and packets from DHCP servers active on the subnet.</TD>
+</TR>
+<TR>
+<TD>Diruse.exe: Directory Disk Usage</TD>
+<TD>Scans a directory tree and reports the amount of space used by each user.</TD>
+</TR>
+<TR>
+<TD>Dmdiag.exe: Disk Manager Diagnostics</TD>
+<TD>displays system state and configuration information describing disk storage.</TD>
+</TR>
+<TR>
+<TD>Efsinfo.exe: Encrypting File System Information</TD>
+<TD>Displays information about files encrypted with Encrypting File System (EFS) on NTFS partitions.</TD>
+</TR>
+<TR>
+<TD>Exctrlst.exe: Extensible Performance Counter List</TD>
+<TD>Displays information about files and folders encrypted with Encrypting File System (EFS) on NTFS file system partitions.</TD>
+</TR>
+<TR>
+<TD>Getsid.exe: Get Security ID</TD>
+<TD>Compares the security IDs of two user accounts.</TD>
+</TR>
+<TR>
+<TD>Iasparse.exe: IAS Parse Tool<BR>
+(Windows Server&nbsp;2003 Support Tools only)</TD>
+<TD>Parses Internet Authentication Service and Remote Access Service logs and converts them into a readable format.</TD>
+</TR>
+<TR>
+<TD>Ntfrsutl.exe: NTFRS Utility</TD>
+<TD>Dumps the internal tables and thread and memory information for the NTFRS service.</TD>
+</TR>
+<TR>
+<TD>Setspn.exe: Manipulate Service Principal Names for Accounts</TD>
+<TD>Manages the Service Principal Names directory property for an Active Directory&reg; account.</TD>
+</TR>
+<TR>
+<TD>Setx.exe: Set Environment Variables<BR>
+(Windows&nbsp;XP Support Tools only)</TD>
+<TD>Allows users to set environment variables in the user or system environment using batch files.</TD>
+</TR>
+<TR>
+<TD>Xcacls.exe</TD>
+<TD>Enables administrators to set from the command line all file-system security options that are accessible in Windows Explorer.</TD>
+</TR>
+</TABLE>
+
+<A NAME="os"></A><H3>Operating System</H3>
+
+<P>The following former Windows Resource Kit Tools are now included in the Windows Server&nbsp;2003 operating system. For more information about these tools, in Help and Support Center, click <B>Tools</B>, and then click <B>Command-line reference A-Z</B>.</P>
+
+<TABLE>
+<TR>
+<TH>Tool</TH>
+<TH>Description</TH>
+</TR>
+<TR>
+<TD>Regback.exe: Registry Backup</TD>
+<TD>Backs up all or part of the registry. This functionality is now included in Reg.exe.</TD>
+</TR>
+<TR>
+<TD>Regdmp.exe</TD>
+<TD>Dumps all or part of the registry to standard output. This functionality is now included in Reg.exe.</TD>
+</TR>
+<TR>
+<TD>Regfind.exe</TD>
+<TD>Searches and optionally replaces registry data. This functionality is now included in Reg.exe.</TD>
+</TR>
+<TR>
+<TD>Regrest.exe: Registry Restoration</TD>
+<TD>Restores all or part of the registry. This functionality is now included in Reg.exe.</TD>
+</TR>
+<TR>
+<TD>Sc.exe: Service Controller Tool</TD>
+<TD>Retrieves information about services from Service Controller.</TD>
+</TR>
+<TR>
+<TD>User State Migration Tool</TD>
+<TD>Helps migrate a user's documents and settings (state) before an operating system migration.</TD>
+</TR>
+</TABLE>
+
+<HR>
+
+<H2><A NAME="resource">Resource Kit Support Policy</A></H2>
+
+<P>The SOFTWARE supplied in the Windows Resource Kit Tools is not supported under any Microsoft standard support program or service. Customers can, however, report issues and bugs by sending e-mail to <A HREF="mailto:rkinput@microsoft.com"><B>rkinput@microsoft.com</B></A>. Microsoft will, at its sole discretion, address issues and bugs reported in this manner, and responses are not guaranteed. This e-mail address is only for issues related to the Windows Resource Kit Tools and the Windows Deployment and Resource Kits.</P>
+
+<P>The SOFTWARE (including instructions for its use and all printed and online documentation) is provided &quot;AS IS&quot; without warranty of any kind. Microsoft further disclaims all implied warranties including, without limitation, any implied warranties of merchantability or of fitness for a particular purpose. The entire risk arising out of the use or performance of the SOFTWARE and documentation remains with you.</P>
+
+<P>In no event shall Microsoft, its authors, or anyone else involved in the creation, production, or delivery of the SOFTWARE be liable for any damages whatsoever (including, without limitation, damages for loss of business profits, business interruption, loss of business information, or other pecuniary loss) arising out of the use of or inability to use the SOFTWARE or documentation, even if Microsoft has been advised of the possibility of such damages.</P>
+
+<P>For more information about Windows Server&nbsp;2003 and the Windows Server&nbsp;2003 Deployment and Resource Kits, visit the <A ID="MSUrl" HREF="http://go.microsoft.com/fwlink/?LinkId=286"  TARGET="_new">Windows Deployment and Resource Kits</A> Web site. </P>
+
+<P>&copy; Copyright 1985–2003 Microsoft Corporation. All rights reserved.</P>
+
+<HR SIZE=3 NOSHADE>
+
+<A NAME="tools"></A><H2>Individual Tool Release Notes</H2>
+
+<P>The following section includes information about individual Windows Resource Kit Tools that are not covered in Windows Resource Kit Tools Help (Rktools.chm).</P>
+
+<HR>
+
+<H2><A NAME="Acctinfo">Acctinfo.dll: Additional Account Information Properties Page</A></H2>
+<p>Acctinfo.dll is a dynamic link library that, when registered on a computer, adds a new property page (<B>Additional Account Info</B>) to the user object <B>Properties</B> dialog box in Active Directory Users and Computers. This new property page displays information such as the date when a user's password was last set, the date when a user's password will expire, and the dates and times when a user last logged on and logged off. This information is not typically available in Active Directory Users and Computers, for one of two reasons:</p>
+
+<UL>
+<LI><B>In some cases, the information is not actually stored in Active Directory, but instead is calculated only when needed</B>. For example, the date that a user's password will expire is not stored in Active Directory; instead, Active Directory stores the date that the password was last set and the maximum allowed password age (for example, passwords must be set every 60 days). To determine the actual date that a password expires, you typically have to use scripts to retrieve this information and calculate the expiration date. Acctinfo.dll performs these calculations for you.</LI>
+	<LI><B>In some cases, information is stored locally rather than in Active Directory</B>. For example, last logon and last logoff times are stored on each individual domain controller and are not replicated throughout the domain. Acctinfo.dll enables you to determine the last time a user logged on or logged off from a specified domain controller. If users are typically authenticated by the same domain controller, this will tell you when these users last logged on to or logged off from the domain. If users are authenticated by multiple domain controllers, you will need to install Acctinfo.dll on each of these servers and check the account information on each one.</LI></UL>
+
+<p>Acctinfo.dll is primarily designed to report information about user passwords, account status, and logons. However, it also includes a mechanism for changing user passwords and for unlocking locked user accounts.</p>
+
+<P><B>Concepts</B></P>
+
+<P>Acctinfo.dll adds a custom property page to the user account object <B>Properties</B> dialog box in Active Directory Users and Computers. For more information about Active Directory Users and Computers, see Help and Support Center for Windows Server&nbsp;2003.</P>
+
+<P><B>System Requirements</B></P>
+
+<P>The following are the system requirements for this tool:
+
+<UL>
+	<LI>Windows Server&nbsp;2003 or Windows 2000 Server operating system </LI>
+	<LI>You must be an Administrator to install Acctinfo.dll. </LI></UL></p>
+
+<P><B>File Required</B></P>
+
+<UL>
+<li>Acctinfo.dll </LI>
+</UL>
+
+<H3>AcctInfo.dll Remarks</H3>
+<P><B>Installing Acctinfo.dll</B></P>
+
+<P>To access the custom property page provided by Acctinfo.dll, you must first install and register the file Acctinfo.dll.</P>
+
+<P>To install and register Acctinfo.dll</P>
+
+<OL>
+	<LI>Copy the file Acctinfo.dll to the <I><nobr>%windir%</nobr>\system32</I> folder. In Windows Server&nbsp;2003, this is typically C:\Windows\System32. In Windows&nbsp;2000, this is typically C:\Winnt\System32. </LI>
+	<LI>Open a command window, and type the following (this example assumes that your <I><nobr>%windir%</nobr>\system32</I> folder is C:\Windows\System32): <BR>
+<B><PRE>regsvr32 c:\windows\system32\acctinfo.dll</PRE></B></LI>
+</OL>
+
+<P>If the command is successful, a dialog box appears informing you that Acctinfo.dll has been registered.</P>
+
+<P CLASS="alert"><B>Note</B></P>
+<P CLASS="indent">Acctinfo.dll must be registered on each computer on which Active Directory Users and Computers is used to access user account information. For example, suppose you have two servers (Server A and Server B) commonly used to display user account information. If you register Acctinfo.dll on Server A, the <B>Additional Account Info</B> property page will be available in Active Directory Users and Computers. However, this property page will <I>not</I> be available in Active Directory Users and Computers on Server B. To access this property page on Server B, you must register Acctinfo.dll on Server B.</P>
+
+<P><B>Removing Acctinfo.dll</B></P>
+
+<P>You can remove the <B>Additional Account Info</B> property page from Active Directory Users and Computers by uninstalling Acctinfo.dll. To uninstall Acctinfo.dll, open a command window, and type the following (this example assumes that your <I><nobr>%windir%</nobr>\system32</I> folder is C:\Windows\System32): <BR>
+<B><PRE>regsvr32 /u c:\windows\system32\acctinfo.dll</PRE></B></P>
+
+
+<P>If the command is successful, the file Acctinfo.dll will be removed, and the <B>Additional Account Info</B> property page will no longer be visible in Active Directory Users and Computers. Note that this removes only the custom property page, and does not affect the data displayed on that page. This information (such as last logon and last logoff) can still be retrieved by other means.</P>
+
+<H3>Acctinfo.dll UI</H3>
+
+<P>Information retrieved by Acctinfo.dll must be viewed in Active Directory Users and Computers. To view information for a specified account, open Active Directory Users and Computers (either by using the <B>Start</B> menu or by typing <B>dsa.msc</B> in the <B>Run</B> dialog box). Locate and double-click the appropriate user account. In the <B>Properties</B> dialog box, click the <B>Additional Account Info</B> tab. </P>
+
+<P>The <B>Additional Account Info</B> property page displays the following attribute values:</P>
+
+<P><B>Additional Account Info Property Page</B></P>
+
+<TABLE>
+<TR>
+<TH>Attribute</TH>
+<TH>Description</TH>
+</TR>
+<TR><TD><B>Password Last Set</B></TD>
+<TD>Displays the date and time when the user password was last set.</TD></TR>
+<TR>
+<TD><B>Domain Password Policies</B></TD>
+<TD>Displays password policies for the domain, including the maximum password age and the maximum number of bad passwords allowed before an account is locked out. To view this information, click the <B>Domain PW Info</B> button.</TD></TR>
+<TR>
+<TD><B>Password Expires</B></TD>
+<TD>Displays the date and time when the password will expire. This value is calculated based on the date when the password was last set and the maximum allowed password age. This means that an expiration date will be shown even for accounts for which the password never expires. To verify that an account password will not expire, clicked the <B>Decode</B> button. If the flag UF_DONT_EXPIRE_PASSWD appears, the password will not expire, regardless of the date shown on the <B>Additional Account Info</B> property page.</TD></TR>
+<TR>
+<TD><B>User Account Control</B></TD>
+<TD>Displays values stored in the userAccountControl attribute in Active Directory; these include data such as whether a user's password expires, whether a user requires a smart card to log on, and whether a user account is trusted for delegation. The displayed value (a number such as 512) represents the sum of all the enabled "flags" in the userAccountControl. To view the individual flags that are enabled for an account, click the <B>Decode</B> button to display the <B>userAccountControl Flags</B> dialog box.<p>In this dialog box, the ADSI constant for each enabled flag is displayed. For example, if a user's password has expired, the value ADS_UF_PASSWORD_EXPIRED is displayed.</p></TD></TR>
+<TR>
+<TD><B>Locked Out</B></TD>
+<TD>Indicates whether or not a user account is locked out. If an account is locked, you can unlock it by clicking the <B>Set PW On Site DC</B> button.</TD></TR>
+<TR>
+<TD><B>Last-Logon-Timestamp</B></TD><TD>Displays the date and time that a user last logged on to this domain controller. <BR><p><B>Note. </B>If you are accessing the <B>Additional Account Info</B> property page from a member server, information will be displayed for the domain controller that authenticated the user logged on to the member server.</P></TD>
+</TR>
+<TR>
+<TD><B>SID and SID History</B></TD>
+<TD>Displays the security identifier (SID) for the user account. If the user account was migrated from another domain or forest, the <B>SID History</B> button will be available. Clicking this button will display security identifiers that were migrated along with the user account.</TD></TR>
+<TR><TD><B>GUID</B></TD>
+<TD>Displays the globally unique identifier (GUID) for the user account.</TD></TR>
+<TR><TD><B>Last Logon</B></TD>
+<TD>Indicates the date and time that the user last logged on (that is, the date and time that the user was last authenticated by this domain controller).</TD></TR>
+<TR><TD><B>Last Logoff</B></TD>
+<TD>Indicates the date and time that the user last logged off from this domain controller.</TD></TR>
+<TR><TD><B>Last Bad Logon Time</B></TD>
+<TD>Indicates the date and time that the user last failed to log on to this domain controller.</TD></TR>
+<TR><TD><B>Logon Count</B></TD>
+<TD>Indicates the number of times that the user has successfully logged on to this domain controller.</TD></TR>
+<TR><TD><B>Bad Password Count</B></TD>
+<TD>Indicates the number of times that the user has failed to log on to this domain controller because he or she provided an incorrect password.</TD></TR>
+
+<TR>
+<TD><B>User DN, Site, and Domain Controller</B></TD>
+<TD>Displays the distinguished name for the user account (for example, CN=youngrob,OU=Finance,DC=fabrikam,DC=com), as well as the Active Directory site and the name of the domain controller that last authenticated the user. <p>To view this information, click the <B>Set PW on Site DC</B> button. To view the site and domain controller information, click the button <B>Just Find Site</B>. </p><p><B>Important</B>. If you click the <B>Set PW On Site DC </B>button, the <B>Change Password on a DC in the Users Site</B> dialog box is displayed. Unless you want to change a user's password, be sure to click <B>Cancel</B> to close this dialog box. Suppose you open this dialog box and then click <B>OK</B>. The user's password will be changed to no password, because the <B>Password</B> and <B>Change Password</B> text boxes are empty. Depending on your domain password policies, this will either result in an error (because blank passwords are not allowed), or will result in the user's password being changed to no password. If you access this dialog box for informational purposes (such as viewing the user's distinguished name), close the dialog box by clicking <B>Cancel</B>.</p></TD>
+</TR>
+</TABLE>
+
+<P><B>Modifying User Account Properties from the Additional Account Info Property Page</B></P>
+
+<P>Although Acctinfo.dll is primarily designed to display information, it also allows you to perform two commonly required tasks: changing a user's password, and unlocking a locked user account.</P>
+
+<P><B>Changing a User's Password</B></P>
+
+<OL>
+<LI>On the Additional Account Info property page, click Set PW On Site DC.</LI>
+<LI>In the <B>Change Password on a DC in the Users Site</B> dialog box, type a new password in the <B>Password</B> and <B>Confirm Password</B> text boxes. Optionally, you can also select <B>User Must Change Password At Next Logon</B>. If selected, the user will be able to use their new password to logon to the domain, but will then be prompted to change their password.</LI>
+<LI>Click <B>OK</B>.</LI>
+</OL>
+
+<P>You must have the right to reset user passwords for this operation to succeed. If you do not have this right, you will still be able to access the <B>Change Password on a DC in the Users Site</B> dialog box. However, after making the changes and clicking <B>OK</B>, an error message will be displayed, and the password will not be changed.</P>
+
+<P><B>Unlocking a Locked User Account</B></P>
+
+<OL>
+<LI>On the Additional Account Info property page, click Set PW On Site DC.</LI>
+<LI>In the <B>Change Password on a DC in the Users Site</B> dialog box, type a new password in the <B>Password</B> and <B>Confirm Password</B> text boxes. You cannot unlock a user account in this dialog box without setting a password as well.
+
+<P CLASS="alert"><B>Caution</B></P>
+<P CLASS="indent">You can select the <B>Unlock Account</B> check box by clicking both the <B>Password </B>and <B>Confirm Password </B>text boxes without typing anything. However, this will result in the user no longer having any password (because the two password boxes will be blank).</P></LI>
+<LI>Select the <B>Unlock Account</B> check box. </LI>
+<LI>Click <B>OK</B>.</LI></OL>
+
+
+<HR>
+
+<H2><A NAME="custreasonedit">Custreasonedit.exe: Custom Reason Editor</A></H2>
+
+<P>Custom Reason Editor (CustReasonEdit) is a command-line and GUI tool that allows users to add, modify, and delete custom reasons used by the Shutdown Event Tracker on the Windows Server 2003 operating system. There are two ways to use this tool: Use the command line to perform basic importing and exporting of custom reasons to a registry file, or use the GUI to perform all other types of custom reason editing. CustReasonEdit includes a set of sample reasons to help you get started.</P>
+
+<P><B>Concepts</B></P>
+
+<P>Shutdown Event Tracker helps system administrators track reasons for system down-time by collecting these reasons at the time of shutdown and logging this data to the event log. For more information about the Shutdown Event Tracker component, see Help and Support Center.</P>
+
+<P><B>System Requirements</B></P>
+
+<P>The following are the system requirements for this tool:</P>
+
+<UL>
+<LI>Windows Server&nbsp;2003 operating system.</LI>
+<LI>You must be an Administrator on the local computer.</LI>
+</UL>
+
+<P><B>File Required</B></P>
+<UL>
+<LI>Custreasonedit.exe</LI>
+<LI>Samplereasons.reg</LI>
+</UL>
+
+<H3>CustReasonEdit Remarks</H3>
+
+<P><B>Reviewing Best Practices</B></P>
+
+<P>Use the table below to identify best practices you should use when working with custom reasons.</P>
+
+
+<TABLE>
+<TR>
+<TH><B>Best Practice</B></TH>
+<TH><B>Description</B></TH>
+</TR>
+<TR>
+<TD>Use built-in reasons whenever possible.</TD>
+<TD>It is recommended that you use built-in reasons where possible. By using built-in reasons, you will ensure that your annotations are compatible with any future technology released by Microsoft that relates to reasons why you shut down your computer.</TD>
+</TR>
+<TR>
+<TD>Add custom reasons for specific reboot or shutdown reasons.</TD>
+<TD>Add custom reasons when the custom reason will help to identify a specific reason for the shutdown. For example, it is not useful to see that 50% of the reboots in a data center were due to cause &quot;Other&quot;. On the other hand, if there is a specific application setting that requires a shutdown, that is a good candidate for a custom reason.</TD>
+</TR>
+<TR>
+<TD>Require comments if reasons are not specific enough.</TD>
+<TD>If a reason is very general, consider requiring a comment for that reason instead of creating a custom reason. Comments ensure that the user is prompted to be more specific. When the data is reviewed months or years later, the greater detail can help to explain the root cause of the shutdown.</TD>
+</TR>
+<TR>
+<TD>Use correct categories, distinct titles, and clear descriptions.</TD>
+<TD>The Shutdown Event Tracker displays valid custom reasons. It is the responsibility of the user to enter descriptive, distinct names and proper categories. Doing so will help system operators to quickly choose the correct reboot reason from the Shutdown Event Tracker dialog box.</TD>
+</TR>
+<TR>
+<TD>Create task-based reasons.</TD>
+<TD>Create custom reasons based on the task that the user is performing at the time of a shutdown. For example, consider using a reason title of &quot;Failure Recovery: Application&quot; instead of a reason title of &quot;Application: Failure Recovery.&quot; Using task-based reasons helps users pick correct annotations quickly from a long list of options.</TD>
+</TR>
+</TABLE>
+
+<H3>Installing the Sample Reason Package</H3>
+
+<P>To use the sample reasons included with CustReasonEdit, you must install them first.</P>
+
+<P>To install the sample reason package:</P>
+
+<OL>
+<LI>Navigate to the folder where the Resource Kit Tools are installed.</LI>
+<LI>Right-click the file Samplereasons.reg, and then click Merge on the shortcut menu.</LI>
+</OL>
+
+<P>This adds the set of sample reasons to the local system.</P>
+
+
+<P CLASS="alert"><B>Note</B></P>
+<P CLASS="indent">Installing the sample reason package will also disable built-in reasons. For more information, see &quot;Disabling Built-in Reasons&quot; later in this topic.</P>
+
+
+<P><B>Localizing Custom Reasons</B></P>
+
+<P>The Shutdown Event Tracker displays custom reasons corresponding to the system locale, not the user locale. For more information about System Locale, see Help and Support Center. CustReasonEdit stores custom reasons for the system locale on the host system; however, it accepts input in any language. For example, if the user creates custom reasons by using Japanese characters on an English language version system, these reasons will be displayed in Japanese characters by the Shutdown Event Tracker on the English language version system, as long as the necessary code page is installed in the operating system.</P>
+
+<P><B>Testing Custom Reasons</B></P>
+
+<P>On a system on which the Shutdown Event Tracker is enabled, you can test custom reasons created by CustReasonEdit. Click <B>Shut Down</B> on the <B>Start</B> menu. The <B>Shut Down Windows</B> dialog box should display the custom reasons you created.</P>
+
+<P><B>Deploying Custom Reasons</B></P>
+
+<P>Use CustReasonEdit to create well-formed custom reasons on a single computer. The following list describes several options for deploying these reasons to a wider range of computers.</P>
+
+<UL>
+<LI>A file can be exported by using the command-line export command, and this file can then be imported by CustReasonEdit on every system.</LI>
+<LI>The GUI can be used to connect to each system and populate the custom reasons.</LI>
+<LI>Group Policy can be used to propagate the registry subkey where custom reasons are stored. To accomplish this, use Group Policy to propagate the following subkey and all of its entries:
+
+<P>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Reliability\UserDefined</P></LI>
+</UL>
+
+<P><B>Disabling Built-in Reasons</B></P>
+
+<P>You can exclude built-in reasons from the Shutdown Event Tracker list and use custom reasons only. In the registry editor Regedit.exe, navigate to:<BR>
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Reliability\ShutdownIgnorePredefinedReasons</P>
+
+<P>Create the registry entry <b>ShutdownIgnorePredefinedReasons</b> with the data type DWORD, and the value set to&nbsp;1.</P>
+
+<P>To re-enable built-in reasons, set the value of the entry <b>ShutdownIgnorePredefinedReasons</b> to&nbsp;0.</P>
+
+<H3>CustReasonEdit Syntax</H3>
+
+<P><B>custreasonedit</B> [<B>/i</B>] [<B>/l</B>] [<B>/e</B> <I>FileName</I>] [<B>/r</B> <I>FileName</I>] [<B>/s</B>] [<B>/m</B> <I>Host</I>] [<B>/?</B>]</P>
+
+<P><B>Parameters</B></P>
+
+<DL>
+
+<DT><B>/i</B></DT>
+
+<DD>Opens the GUI window for complete editing of shutdown reasons.</DD>
+
+<DT><B>/l</B></DT>
+
+<DD>Lists the existing shutdown reasons.</DD>
+
+<DT><B>/e</B> <I>FileName</I></DT>
+
+<DD>Exports the custom reason subkey to a registry file named FileName.</DD>
+
+<DT><B>/r</B> <I>FileName</I></DT>
+
+<DD>Imports the custom reason subkey to a registry file named FileName.</DD>
+
+<DT><B>/s</B></DT>
+
+<DD>Runs CustReasonEdit using the system locale for custom reasons.</DD>
+
+<DT><B>/m</B> <I>Host</I></DT> 
+
+<DD>Allows you to connect to a remote system to import or export custom reasons</DD>
+
+<DT><B>/?</B></DT>
+
+<DD>Displays command-line usage.</DD>
+
+</DL>
+
+<H3>CustReasonEdit UI</H3>
+
+<P>To access the GUI you must type the following at a command prompt: <B>custreasonedit /i</B>. By default, the list of custom reasons are populated with the list of custom reasons installed on the local system. For information about the reason attributes such as <B>Planned</B>, <B>Expected Shutdown</B>, and <B>Unexpected Shutdown</B>, see the Shutdown Event Tracker documentation in Help and Support Center.</P>
+
+<P>CustReasonEdit contains the following windows:</P>
+
+<P><B>Custom Reason Editor window</B></P>
+
+<TABLE>
+<TR>
+<TH><B>Option</B></TH>
+<TH><B>Description</B></TH>
+</TR>
+<TR>
+<TD><B>Custom Reason List</B></TD>
+<TD>Displays the custom reasons you have added or imported.</TD>
+</TR>
+<TR>
+<TD><B>Import</B></TD>
+<TD>Opens a window to browse for the registry file to import.</TD>
+</TR>
+<TR>
+<TD><B>Export</B></TD>
+<TD>Opens a window to browse for the registry file to export.</TD>
+</TR>
+<TR>
+<TD><B>Reason Category</B></TD>
+<TD>Lists the reasons why you might want to shut down your computer. These categories correspond to the major categories of the default reasons used by Windows. Use this list to assign a reason category to your custom reason.</TD>
+</TR>
+<TR>
+<TD><B>Minor Code</B></TD>
+<TD>Specifies a number between 1 and 1000. This number must be different from an existing minor code. Minor codes are created based on the combination of the following attributes: Reason Category, Planned, Unexpected Shutdown, and Expected Shutdown.</TD>
+</TR>
+<TR>
+<TD><B>Planned</B></TD>
+<TD>Specifies that this custom reason applies to a planned shutdown.</TD>
+</TR>
+<TR>
+<TD><B>Comment Required</B></TD>
+<TD>Specifies that this custom reason requires the user to enter a comment before the computer can be shut down.</TD>
+</TR>
+<TR>
+<TD><B>Unexpected Shutdown</B></TD>
+<TD>Displays this reason in the Unexpected Shutdown dialog boxes.</TD>
+</TR>
+<TR>
+<TD><B>Expected Shutdown</B></TD>
+<TD>Displays this reason in the Expected Shutdown dialog boxes.</TD>
+</TR>
+<TR>
+<TD><B>Title</B></TD>
+<TD>Describes the reason category in 64 characters or less.</TD>
+</TR>
+<TR>
+<TD><B>Description</B></TD>
+<TD>Describes the reason in detail in 256 characters or less.</TD>
+</TR>
+<TR>
+<TD><B>Remove</B></TD>
+<TD>Removes the selected custom reason from the Custom Reason List.</TD>
+</TR>
+<TR>
+<TD><B>Add</B></TD>
+<TD>Adds the new custom reason to the Custom Reason List.</TD>
+</TR>
+<TR>
+<TD><B>Update</B></TD>
+<TD>Saves any changes you make to a selected custom reason.</TD>
+</TR>
+<TR>
+<TD><B>Exit</B></TD>
+<TD>Closes the Custom Reason Editor window.</TD>
+</TR>
+</TABLE>
+
+<P><B>Switch to Another Computer window</B></P>
+
+<TABLE>
+<TR>
+<TH><B>Option</B></TH>
+<TH><B>Description</B></TH>
+</TR>
+<TR>
+<TD><B>Local Computer</B></TD>
+<TD>Specifies that you are using a local system to import, export, or edit custom reasons.</TD>
+</TR>
+<TR>
+<TD><B>Network Computer</B></TD>
+<TD>Specifies that you are connecting to a remote system to import, export, or edit custom reasons.</TD>
+</TR>
+<TR>
+<TD><B>Network Computer Name</B></TD>
+<TD>Specifies the name of the remote computer.</TD>
+</TR>
+</TABLE>
+
+<H3>CustReasonEdit Example</H3>
+
+<P><B>Add a Custom Reason</B></P>
+
+<P>The task in this example is to use the CustReasonEdit UI to add a custom reason.</P>
+
+<OL>
+
+<LI>Type the following at the command line:<BR>
+
+<B><PRE>custreasonedit /i</PRE></B></LI>
+
+<LI>Press ENTER. The <B>Custom Reason Editor</B> window opens.</LI>
+
+<LI>Under <B>Reason Category</B>, select a reason category corresponding to the major category of the default reasons used by Windows.
+	<UL>
+	<LI>If this reason should be used for planned shutdowns, select the <B>Planned</B> check box.</LI>
+	
+	<LI>If this reason requires users to add a comment before they can shut down the computer, select the <B>Comment Required</B> check box.</LI>
+	
+	<LI>To indicate whether this reason should be displayed in the <B>Unexpected Shutdown</B> or <B>Expected Shutdown</B> dialog boxes, select at least one of the <B>Unexpected Shutdown</B> and <B>Expected Shutdown</B> check boxes.</LI>
+	</UL>
+</LI>
+
+<LI>In the <B>Minor Code</B> box, enter a number between 1 and 1000 that is different from an existing minor code. Minor codes are created based on the combination of the following attributes: <B>Reason Category</B>, <B>Planned</B>, <B>Unexpected Shutdown</B>, and <B>Expected Shutdown</B>.</LI>
+
+<LI>In the <B>Title</B> box, type a  title for the reason category in 64 characters or less.</LI>
+
+<LI>In the <B>Description</B> box, type a detailed description of the reason in 256 characters or less.</LI>
+
+<LI>Click <B>Add</B> to add the reason to the system.</LI>
+
+</OL>
+ 
+<HR>
+
+<H2><A NAME="dnsdiag">Dnsdiag.exe: DNS Resolver Tool</A></H2>
+
+<P>DNS Resolver Tool (DNSDiag) is a command-line tool that allows you to troubleshoot e-mail delivery problems caused by Domain Name System (DNS) issues. DNSDiag simulates the Simple Mail Transfer Protocol (SMTP) service's internal code-path and displays diagnostic messages that indicate how the DNS resolution is proceeding. DNSDiag must be run on the computer where the DNS problems are occurring.</P>
+
+
+<P CLASS="alert"><B>Note</B></P>
+<P CLASS="indent">You can use DNSDiag on a server running Windows Server&nbsp;2003 that is running the SMTP service without Exchange installed.</P>
+
+
+<P><B>System Requirements</B></P>
+
+<P>The following are the system requirements for this tool:</P>
+
+<UL>
+<LI>Windows Server&nbsp;2003 operating system.</LI>
+<LI>You must be an Administrator on the local computer if you want DNSDiag to simulate a specific virtual server instance.</LI>
+</UL>
+
+<P><B>File Required</B></P>
+<UL>
+<LI>Dnsdiag.exe</LI>
+</UL>
+
+<H3>DNSDiag Syntax</H3>
+
+<P><B><NOBR>%WINDIR%</NOBR>\system32\inetsrv\dnsdiag</B> <I>HostName</I> [<B>/d</B>] [<B>/v</B> <I>#</I>] [<B>/s</B> <I>ServerList</I>] [<B>/p</B> <I>Protocol</I>] [<B>/a</B>] [<B>/?</B>]</P>
+
+<P><B>Parameters</B></P>
+
+<DL>
+
+<DT><I>HostName</I></DT>
+<DD>Specifies the host name that you want to resolve. <i>HostName</i> is the fully-qualified domain name of the target for the queue where errors are occurring. This name might be different from the name displayed in the SMTP queue in Exchange System Manager.</DD>
+
+<DT><B>/d</B></DT>
+<DD>Runs DNSDiag in debug mode. If this switch is specified, DNSDiag generates verbose output. Debug mode creates generates a great deal of output, and the most critical messages are highlighted in a different color. When this switch is not specified, only the critical messages are generated. the tool generates verbose output.</DD>
+
+<DT><B>/v</B> <I>#</I></DT>
+<DD>Identifies a specific virtual server instance that DNSDiag simulates. For example, if you want DNSDiag to simulate the first virtual server on an Exchange server, type <B>/v 1</B>.<BR>
+<BR>
+<B>Notes</B>
+<UL>
+<LI>You must close all files in the cache before using this parameter. Otherwise, you will get an error message stating that the requested resource is in use.</LI>
+<LI>You must be an Administrator on the local computer to use this parameter.</LI>
+<LI>After DNSDiag reads the external DNS server list for that specific virtual server instance, it queries that server list for <i>HostName</i>, where <i>HostName</i> is an external host.  If <i>HostName</i> is the name of an Exchange server, the query is generated against the default DNS servers for the local computer.</LI>
+<LI>If you are running DNSDiag on an Exchange server in a perimeter network, DNSDiag detects this situation and uses the external DNS servers configured on the virtual server.</LI>
+</UL>
+</DD>
+
+<DT><B>/s</B> <I>ServerList</I></DT>
+<DD>Lists the DNS servers' IP addresses in dotted decimal notation. Use this switch if you want to specify a specific set of servers. If this switch is not specified, the default DNS servers on the local computer are used as specified by the <B>/v</B> switch. Separate server IP addresses with a space or a tab character.<BR>
+<B>Note</B><BR>
+You cannot use this switch with the <B>/v</B> switch.</DD>
+
+<DT><B>/p</B> <I>Protocol</I></DT>
+<DD>Allows you to use a protocol different from the one configured in the metabase. If this switch is not specified, the protocol configured in the metabase for smtpsvc/SmtpUseTcpDns is used. You can use the following values:<BR>
+<B>TCP</B> generates a TCP-only query.<BR>
+<B>UDP</B> generates a UDP-only query.<BR>
+<B>DEF</B> generates a default query that will initially query a server with UDP, and then&mdash;if that query results in a truncated reply&mdash;it will be retried with TCP.<BR>
+<B>Note</B><BR>
+You cannot use this switch with the <B>/v</B> switch.</DD>
+
+<DT><B>/a</B></DT>
+<DD>Runs DNSDiag in a mode where all the DNS servers obtained (either through the registry, Active Directory, or the <B>/s</B> switch) are queried in sequence and all query results are displayed.</DD>
+
+<DT><B>/?</B></DT>
+<DD>Displays command-line usage.</DD>
+
+</DL>
+
+<H3>DNSDiag Examples</H3>
+
+<P><B>Example: Resolve an External Host by Using Specific DNS Servers</B></P>
+
+<P>The task in this example is to use DNSDiag to resolve the external host with a DNS name of example.com by using the DNS servers with the IP address 127.1.0.1. and 127.1.10.8.</P>
+
+<P>Type the following at the command line:</P>
+
+<P><B><PRE><NOBR>%WINDIR%</NOBR>\system32\inetsrv\dnsdiag example.com -s 127.1.0.1     127.1.10.8</PRE></B></P>
+
+
+<P CLASS="alert"><B>Note</B></P>
+<P CLASS="indent">DNSDiag uses error codes that are set at the ERROR LEVEL for use in batch files. Use the following descriptions to understand the DNSDiag return codes:</P>
+
+
+<TABLE>
+<TR>
+<TH><B>Code</B></TH>
+<TH><B>Description</B></TH>
+</TR>
+<TR>
+<TD><B>0</B></TD>
+<TD>The host name was resolved successfully to one or more IP addresses.</TD>
+</TR>
+<TR>
+<TD><B>1</B></TD>
+<TD>The host name could not be resolved due to an unspecified error. If you receive this error, review the text messages output from the tool to diagnose the issue.</TD>
+</TR>
+<TR>
+<TD><B>2</B></TD>
+<TD>The host name does not exist. The error was returned by an authoritative DNS server for the domain.</TD>
+</TR>
+<TR>
+<TD><B>3</B></TD>
+<TD>The host name could not be located in DNS. This is not an error from the authoritative DNS server. Check the configuration of the DNS server you are using and ensure it can resolve external names.</TD>
+</TR>
+<TR>
+<TD><B>4</B></TD>
+<TD>A looping condition was detected.</TD>
+</TR>
+</TABLE>
+
+<HR>
+
+<H2><A NAME="lockoutstatus">Lockoutstatus.exe: Account Lockout Status</A></H2>
+
+<H3>Overview</H3>
+
+<P>Account Lockout Status (LockoutStatus) is a combination command-line and GUI tool that displays lockout information about a particular user account. LockoutStatus collects information from every contactable domain controller in the target user account's domain.</P>
+
+<P><B>File Required</B></P>
+<UL>
+<LI>Lockoutstatus.exe</LI>
+</UL>
+
+<H3>LockoutStatus Syntax</H3>
+
+<P><B>lockoutstatus</B> {<B>/u:</B><I>DomainName</I><B>\</B><I>UserName</I> | <B>/u:</B><I>UserName</I><B>@</B><I>DomainName</I>} [<B>/?</B>]</P>
+
+<DL>
+
+<DT><I>DomainNam</I></DT>
+<DD>Target NetBIOS or DNS domain name</DD>
+
+<DT><I>UserName</I></DT>
+<DD>Target user name</DD>
+
+</DL>
+
+<H3>LockoutStatus GUI</H3>
+
+<P><B>File Menu</B></P>
+
+<P>The <b>File</b> menu allows the target user and domain to be changed. This menu also allows the output of LockoutStatus to be saved in text format.</P>
+
+<P><B>View Menu</B></P>
+
+<P>The <b>View</b> menu allows the user to view the status of the target users password. This menu also alows the user to refresh the main window of LockoutStatus.</P>
+
+<HR>
+
+<H2><A NAME="regview">Regview.exe: Registry Viewer Tool</A></H2>
+
+<P>Registry Viewer Tool (RegView) is a command-line tool that allows you to view Group Policy Registry.pol files without applying them to the registry.</P>
+
+<P><B>Concepts</B></P>
+
+<P><B>Registry.pol Files</B></P>
+
+<P>The Administrative Templates extension of Group Policy saves information in the Group Policy template in text files with the name Registry.pol. These files contain the customized registry settings that are applied to the Machine or User portion of the registry, which you specify by using Group Policy Object Editor. The Windows&nbsp;2000 Registry.pol file is analogous to the Windows&nbsp;95 or Windows&nbsp;98 Config.pol file and the Windows&nbsp;NT&reg;&nbsp;4.0 NTConfig.pol file.</P>
+
+<P>Two Registry.pol files are created and stored in the Group Policy template&mdash;one for Computer Configuration, which is stored in the \Machine subdirectory, and one for User Configuration, which is stored in the \User subdirectory.</P>
+
+
+<P CLASS="alert"><B>Note</B></P>
+<P CLASS="indent">The format of the .pol files in the Group Policy template differs from that of the .pol files in previous versions of Windows.</P>
+<P CLASS="indent">The .pol files created by Windows&nbsp;NT&nbsp;4.0 and Windows&nbsp;95 can be applied only to the operating system on which they were created. The .pol file produced by the Windows&nbsp;NT&nbsp;4.0 System Policy Editor was a binary file, whereas the Registry.pol file produced by the Administrative Templates node of Group Policy Object Editor is a text file with embedded binary strings.</P>
+
+
+<P><B>System Requirements</B></P>
+
+<P>The following are the system requirements for this tool:</P>
+
+<UL>
+<LI>Windows Server&nbsp;2003 or Windows&nbsp;2000 operating system.</LI>
+<LI>You must be an Administrator on the local computer.</LI>
+</UL>
+
+<P><B>File Required</B></P>
+<UL>
+<LI>Regview.exe</LI>
+</UL>
+
+<H3>RegView Syntax</H3>
+
+<P><B>regview</B> <I>PathName</I><B>\registry.pol</B></P>
+
+<DL>
+
+<DT><I>PathName</I></DT>
+<DD>Specifies the complete path to the directory containing the Registry.pol files that you want to view.</DD>
+
+</DL>
+
+<H3>RegView Examples</H3>
+
+<P><B>Example: View a Registry.pol file</B></P>
+
+<P>The task in this example is to use RegView to view a Registry.pol file.</P>
+
+<P>Type the following at the command line:</P>
+
+<P><PRE><B>regview c:\registry.pol</B></PRE></P>
+
+<P>Output similar to the following is displayed:</P>
+
+<P><PRE>
+KeyName:        Software\Policies\Microsoft\SystemCertificates\EFS
+ValueName:      EFSBlob
+ValueType:      REG_BINARY
+Value:
+01 00 01 00 01 00 00 00 77 02 00 00 73 02 00 00
+00 00 00 00 00 00 00 00 01 05 00 00 00 00 00 05
+15 00 00 00 96 81 73 8c ab 8b 00 94 b3 36 4b 6a
+f4 01 00 00 30 82 02 37 30 82 01 a4 a0 03 02 01
+02 02 10 66 f1 c8 25 99 9c 84 8d 42 65 f5 cd 3c
+fa 5c b5 30 09 06 05 2b 0e 03 02 1d 05 00 30 50
+31 16 30 14 06 03 55 04 03 13 0d 41 64 6d 69 6e
+69 73 74 72 61 74 6f 72 31 0c 30 0a 06 03 55 04
+07 13 03 45 46 53 31 28 30 26 06 03 55 04 0b 13
+1f 45 46 53 20 46 69 6c 65 20 45 6e 63 72 79 70
+74 69 6f 6e 20 43 65 72 74 69 66 69 63 61 74 65
+30 1e 17 0d 30 33 30 33 33 31 31 39 32 39 30 36
+5a 17 0d 30 36 30 33 33 30 31 39 32 39 30 36 5a
+30 50 31 16 30 14 06 03 55 04 03 13 0d 41 64 6d
+69 6e 69 73 74 72 61 74 6f 72 31 0c 30 0a 06 03
+55 04 07 13 03 45 46 53 31 28 30 26 06 03 55 04
+0b 13 1f 45 46 53 20 46 69 6c 65 20 45 6e 63 72
+79 70 74 69 6f 6e 20 43 65 72 74 69 66 69 63 61
+74 65 30 81 9f 30 0d 06 09 2a 86 48 86 f7 0d 01 
+01 01 05 00 03 81 8d 00 30 81 89 02 81 81 00 b7
+94 55 3d 85 39 02 47 bc 64 82 08 33 60 85 36 09
+a6 08 99 71 e1 fe 79 2a e0 25 84 c3 ca 28 22 97
+9d fd ca 49 8d 14 1d 20 f6 81 f9 0f 47 ed cf 7c
+eb e5 ad 74 e4 d4 01 ea 2b a4 4e 9b 09 19 16 05
+KeyName:        Software\Policies\Microsoft\SystemCertificates\EFS\Certificates\
+B7140ABD7B323D6143C57395BE8867D366EAACCD
+ValueName:      Blob
+ValueType:      REG_BINARY
+Value:
+03 00 00 00 01 00 00 00 14 00 00 00 b7 14 0a bd 
+7b 32 3d 61 43 c5 73 95 be 88 67 d3 66 ea ac cd
+02 00 00 00 01 00 00 00 c4 00 00 00 1c 00 00 00 
+6c 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 01 00 00 00 65 00 37 00 39 00 64 00
+61 00 34 00 37 00 65 00 2d 00 34 00 33 00 39 00
+39 00 2d 00 34 00 31 00 63 00 32 00 2d 00 38 00
+39 00 37 00 35 00 2d 00 62 00 63 00 34 00 38 00
+34 00 61 00 31 00 37 00 39 00 37 00 31 00 34 00
+00 00 00 00 00 00 00 00 4d 00 69 00 63 00 72 00
+6f 00 73 00 6f 00 66 00 74 00 20 00 42 00 61 00
+73 00 65 00 20 00 43 00 72 00 79 00 70 00 74 00
+6f 00 67 00 72 00 61 00 70 00 68 00 69 00 63 00
+20 00 50 00 72 00 6f 00 76 00 69 00 64 00 65 00
+72 00 20 00 76 00 31 00 2e 00 30 00 00 00 00 00
+20 00 00 00 01 00 00 00 3b 02 00 00 30 82 02 37
+30 82 01 a4 a0 03 02 01 02 02 10 66 f1 c8 25 99
+9c 84 8d 42 65 f5 cd 3c fa 5c b5 30 09 06 05 2b
+0e 03 02 1d 05 00 30 50 31 16 30 14 06 03 55 04
+03 13 0d 41 64 6d 69 6e 69 73 74 72 61 74 6f 72
+31 0c 30 0a 06 03 55 04 07 13 03 45 46 53 31 28
+30 26 06 03 55 04 0b 13 1f 45 46 53 20 46 69 6c
+65 20 45 6e 63 72 79 70 74 69 6f 6e 20 43 65 72
+74 69 66 69 63 61 74 65 30 1e 17 0d 30 33 30 33
+33 31 31 39 32 39 30 36 5a 17 0d 30 36 30 33 33
+
+KeyName:        Software\Policies\Microsoft\SystemCertificates\EFS\CRLs
+ValueName:
+ValueType:      REG_NONE
+Value:          This key contains no values
+ 
+KeyName:        Software\Policies\Microsoft\SystemCertificates\EFS\CTLs
+ValueName:
+ValueType:      REG_NONE
+Value:          This key contains no values
+</PRE></P>
+
+<HR>
+
+<H2><A NAME="timeit">Timeit.exe</A></H2>
+
+<P>TimeIt is a command-line tool that records the time a specified command takes to run.</P>
+
+<P><B>File Required</B></P>
+<UL>
+<LI>Timeit.exe</LI>
+</UL>
+
+<H3>TimeIt Syntax</H3>
+
+<P><B>timeit</B> [<B>-f</B> <I>FileName</I>] [<B>-a</B>] [<B>-c</B>] [<B>-i</B>] [<B>-d</B>] [<B>-s</B>] [<B>-t</B>] [<B>-k</B> <I>KeyName</I> | <B>-r</B> <I>KeyName</I>] [<B>-m</B> <I>Mask</I>] [<I>Command</I>]</P>
+
+<DL>
+
+<DT><B>-f</B> <I>FileName</I></DT>
+<DD>Specifies the name of the database file where TimeIt keeps a history of previous timings.  The default file name is .\Timeit.dat</DD>
+
+<DT><B>-k</B> <I>KeyName</I></DT>
+<DD>Specifies the keyname to use for this timing run.</DD>
+
+<DT><B>-r</B> <I>KeyName</I></DT>
+<DD>Specifies the key name to remove from the database. If the key name is followed by a comma and a number, the slowest time (positive number) or the fastest time (negative number) for that key name will be removed.</DD>
+
+<DT><B>-a</B></DT>
+<DD>Specifies that TimeIt should display average of all timings for the specified key name.</DD>
+
+<DT><B>-i</B></DT>
+<DD>Ignores nonzero return codes from the program run by TimeIt.</DD>
+
+<DT><B>-d</B></DT>
+<DD>Shows detail for average.</DD>
+
+<DT><B>-s</B></DT>
+<DD>Suppresses systemwide counters.</DD>
+
+<DT><B>-t</B></DT>
+<DD>Specifies tabular output.</DD>
+
+<DT><B>-c</B></DT>
+<DD>Forces a re-sort of the database.</DD>
+
+<DT><B>-m</B> <I>Mask</I></DT>
+<DD>Specifies the processor affinity mask.</DD>
+
+<DT><I>Command</I></DT>
+<DD>Specifies the command to time.</DD>
+
+</DL>
+
+
+<P CLASS="alert"><B>Note</B></P>
+<P CLASS="indent">TimeIt accepts only parameters preceded with a dash (-).</P>
+
+
+</BODY>
+</HTML>

@@ -1,0 +1,121 @@
+CMGetCer.dll
+============
+
+Parameters 
+----------	
+/type 	(ProfileType)		0 – Full Access Profile, 1 – Cert Enroll/Bootstrap profile
+/name 	(ProfileName)		%ServiceName% - Specify the profile name which is running the custom action (CertEnrollProfileName or FullAccessProfileName). Must exactly match the name specified in [Main]
+/dir 	(Config_Path)		%ServiceDir% - directory where to find the configuration file
+/f 	(Config_FileName)	configuration filename
+/a 	(Action)		0 – Check for certificate only. Doesn’t do any other processing, but determines whether a certificate is present or not. Based on the type of profile (Full Access or Cert Enrollment) it then either exits or stays connected. See functional flow chart for appropriate behavior. 
+				1 – Proceed through custom action normally. Follows normal flow according to the configuration file. Any other value defaults to 1.
+
+Usage:
+	GetCertificate /type ProfileType /name ProfileName /dir Config_Path /f Config_FileName /a Action
+
+
+In CMAK:
+Description:
+	Name your action
+
+Program to run: (Browse for CMGetCer.dll - make sure it gets included in the service profile)
+	CMGetCer.dll
+
+Parameters:
+	GetCertificate /type 0 /name %ServiceName% /dir %ServiceDir% /f configfile.txt /a 1
+
+Action-Type:
+	Select when you want this action to execute. 
+
+
+Run this custom action for:
+	Select when this should be run
+
+Enable 'Include the custom action program with this service profile.' 
+Enable 'Program interacts with the user'
+
+
+As an example this is what a .cms file might look like if a profile is configured to run this custom action as a Pre-Tunnel and as a Connect action.
+
+[Pre-Tunnel Actions]
+0=profilename\cmgetcer.dll,GetCertificate /type 0 /name %ServiceName% /dir %ServiceDir% /f configfile.txt /a 1
+0&Description=BootStrap - PreTunnel
+
+[Connect Actions]
+0=profilename\cmgetcer.dll,GetCertificate /type 0 /name %ServiceName% /dir %ServiceDir% /f configfile.txt /a 1
+0&Description=BootStrap - PostConnect
+
+
+Note:
+Remember if only one profile is configured, it should be set as (/type 0) Full Access profile and CertEnrollProfileName value in the configuration file must be empty or not present.
+
+
+=========================
+Sample configuration file
+=========================
+
+
+[Main]
+CertEnrollProfileName=EnrollProfileName
+FullAccessProfileName=FullAccessName
+EnableCertDetection=1
+CertRequestMethod=0
+RenewalPeriod=7
+ShowUI=1
+
+
+[UpdateConfigFile]
+CheckForConfigFileUpdate=0
+UpdateURL=http://websrv/update/configfile.txt
+Version=3
+
+[CertDetection]
+CertDetectIssuer=0
+CertDetectSubject=1
+CertDetectUsage=0
+CertDetectAltSubject=0
+LogicalLocation=0
+SystemStore=0
+;SystemStore=1
+CaseSensitiveDetect=0
+
+[CertDetectIssuer]
+CN=SrvRootCA
+
+
+[CertDetectSubject]
+S=CA
+
+[CertDetectAltSubject]
+domain.com
+
+
+[CertDetectUsage]
+1.3.6.1.5.5.7.3.2
+
+
+
+[WebCertEnroll]
+EnrollURL=http://websrv/certsrv
+CertDetectPollTimeOut=10
+CertDetectPollInterval=20
+CertDetectSleep=5
+
+
+[DirectCertEnroll]
+CertServer=Websrv
+CertServerCAName=SrvRootCA
+GetMachineName=1
+CAStore=0
+Template=Machine
+Usage=1.3.6.1.5.5.8.2.2
+CN=Computers
+DC=microsoft
+DC=org
+OU=IT
+O=Template
+L=City
+S=WA
+C=US
+
+

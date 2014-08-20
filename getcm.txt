@@ -1,0 +1,30 @@
+GetCM.exe (New Version) - gets new CM version from Web or file share
+-----------------------
+Parameters:
+/n		- CM Service profile name
+/d 		- CM Service directory
+/l 		- local version filename
+/serververfile 	- URL to server version file (http://server/ver.txt) or server's file share path (\\server1\share\ver.txt)
+/serverinstall 	- URL to profile.exe (http://server/profile.exe) or servers's file share path (\\server1\share\profile.exe)
+/fileshare	- specifies whether to use a file share instead of a URL. (0 - default - no file share, uses URL; 1 - uses fileshare)
+/sleep 		- Optional sleep time
+/mbtype 	- Optional message box type (0 - default, no message box; 1 - OK message box, 2 - YES/NO messages (gives user control to download or not))
+/text 		- Optional message box text (quoted text)
+/maxbytes 	- Optional maximum bytes to download default 1MB - only applies when using URLs (not used for fileshares)
+
+
+Usage:
+/n %ServiceName% /d %ServiceDir%  /l LocalVersionFileName /serververfile ServerVersionFile /serverinstall ServerProfileExe /fileshare fileshare /sleep opt_sleep_in_sec /mbtype opt_msgbox_type /text "opt_msgbox_string" /maxbytes max_bytes_to_download
+
+Example:
+/n %ServiceName% /d %ServiceDir% /l cmversion.txt /serververfile http://server1/share1/cmsrvver.txt /serverinstall http://server/cm/selfhost/profile.exe  /fileshare 0
+/n %ServiceName% /d %ServiceDir% /l cmversion.txt /serververfile http://server1/share1/cmsrvver.txt /serverinstall http://server/cm/selfhost/profile.exe /sleep 0 /mbtype 0 /maxbytes 2000000
+/n %ServiceName% /d %ServiceDir% /l cmversion.txt /serververfile http://server1/share1/cmsrvver.txt /serverinstall http://server/cm/selfhost/profile.exe /sleep 0 /maxbytes 2000000
+/n %ServiceName% /d %ServiceDir% /l cmversion.txt /serververfile http://server1/share1/cmsrvver.txt /serverinstall http://server/cm/selfhost/profile.exe /mbtype 1 /text "A new version of CM will be downloaded."
+/n %ServiceName% /d %ServiceDir% /l cmversion.txt /serververfile http://server1/share1/cmsrvver.txt /serverinstall http://server/cm/selfhost/profile.exe /mbtype 2 /text "Do you want to download a newer version?"
+
+/n %ServiceName% /d %ServiceDir% /l cmversion.txt /serververfile \\server1\share1\cmsrvver.txt /serverinstall \\server\cm\selfhost\profile.exe /fileshare 1
+/n %ServiceName% /d %ServiceDir% /l cmversion.txt /serververfile \\server1\share1\cmsrvver.txt /serverinstall \\server\cm\selfhost\profile.exe /fileshare 1 /sleep 0 /mbtype 0 /text "" /maxbytes 2000000
+/n %ServiceName% /d %ServiceDir% /l cmversion.txt /serververfile Z:\share2\cmsrvver.txt /serverinstall Z:\share3\profile.exe /fileshare 1 /sleep 0 /mbtype 0 /text "" /maxbytes 2000000
+
+

@@ -1,0 +1,44 @@
+;
+; "CMD Prompt Here" PowerToy
+;
+; Copyright 1996 Microsoft Corporation
+;
+[version]
+signature="$CHICAGO$"
+
+[CmdHereInstall]
+CopyFiles = CmdHere.Files.Inf
+AddReg    = CmdHere.Reg
+
+[DefaultInstall]
+CopyFiles = CmdHere.Files.Inf
+AddReg    = CmdHere.Reg
+
+[DefaultUnInstall]
+DelFiles  = CmdHere.Files.Inf
+DelReg    = CmdHere.Reg
+
+[SourceDisksNames]
+55="CMD Prompt Here","",1
+
+[SourceDisksFiles]
+CmdHere.INF=55
+
+[DestinationDirs]
+CmdHere.Files.Inf = 17
+
+[CmdHere.Files.Inf]
+CmdHere.INF
+
+[CmdHere.Reg]
+HKLM,%UDHERE%,DisplayName,,"%CmdHereName%"
+HKLM,%UDHERE%,UninstallString,,"rundll32.exe syssetup.dll,SetupInfObjectInstallAction DefaultUninstall 132 %17%\CmdHere.inf"
+HKCR,Directory\Shell\CmdHere,,,"%CmdHereAccel%"
+HKCR,Directory\Shell\CmdHere\command,,,"%11%\cmd.exe /k cd ""%1"""
+HKCR,Drive\Shell\CmdHere,,,"%CmdHereAccel%"
+HKCR,Drive\Shell\CmdHere\command,,,"%11%\cmd.exe /k cd ""%1"""
+
+[Strings]
+CmdHereName="CMD Prompt Here PowerToy"
+CmdHereAccel="CMD &Prompt Here"
+UDHERE="Software\Microsoft\Windows\CurrentVersion\Uninstall\CmdHere"

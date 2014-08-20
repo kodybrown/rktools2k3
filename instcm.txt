@@ -1,0 +1,24 @@
+=====================================================
+InstCM.exe - installs a downloaded update
+-----------------------
+Parameters:
+/n		- CM Service profile name
+/d 		- Service Dir
+/e 		- .exe name to launch. Filename format (name.exe)
+/sleep 		- Optional sleep time
+/mbtype 	- Optional message box type (0 - default, no message box; 1 - OK message box, 2 - YES/NO messages (gives user control to install or not))
+/text 		- Optional message box text (quoted text)
+/o 		- Optional parameters (this needs to be the LAST parameter, because everything after /o flag is considered as an optional parameter)
+
+Usage:
+/n %ServiceName% /d %ServiceDir% /sleep sleep_time /e exe_name /mbtype msg_box_type /text quoted_text /o optional_params
+
+Example:
+
+/n %ServiceName% /d %ServiceDir% /sleep 0 /e profile.exe /mbtype 1 /text "A new version will be installed." /o /q:a /c:"cmstp.exe /s profile.inf"
+/n %ServiceName% /d %ServiceDir% /e profile.exe /mbtype 2 /text "Do you want to install a newer version?"
+
+
+
+
+

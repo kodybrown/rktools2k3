@@ -1,0 +1,97 @@
+#if version <= 2
+#endif
+
+CLASS MACHINE
+
+CATEGORY !!WindowsComponents
+
+	CATEGORY !!InternetExplorer
+
+		CATEGORY !!HardeningCat
+
+		POLICY !!README
+
+			KEYNAME "SOFTWARE\Policies\Microsoft\BogusKey"
+			#if version >= 4
+			    SUPPORTED !!SUPPORTED_WindowServer2003
+			#endif
+
+			#if version >= 3
+				EXPLAIN !!READMEDesc
+			#endif
+
+			VALUENAME "BogusVal"
+
+		END POLICY
+
+
+
+		POLICY !!Admin_Hardening
+
+			KEYNAME "SOFTWARE\Microsoft\Active Setup\Installed Components\{A509B1A7-37EF-4b3f-8CFC-4F3A74704073}"
+			#if version >= 4
+			    SUPPORTED !!SUPPORTED_WindowServer2003
+			#endif
+
+			#if version >= 3
+				EXPLAIN !!HardeningDesc
+			#endif
+
+			VALUENAME "IsInstalled"
+		  	VALUEON  NUMERIC 1
+		  	VALUEOFF NUMERIC 0
+
+		END POLICY
+
+
+		POLICY !!User_Hardening
+
+			KEYNAME "SOFTWARE\Microsoft\Active Setup\Installed Components\{A509B1A8-37EF-4b3f-8CFC-4F3A74704073}"
+			#if version >= 4
+			    SUPPORTED !!SUPPORTED_WindowServer2003
+			#endif
+
+			#if version >= 3
+				EXPLAIN !!HardeningDesc
+			#endif
+
+			VALUENAME "IsInstalled"
+		  	VALUEON  NUMERIC 1
+		  	VALUEOFF NUMERIC 0
+
+		END POLICY
+
+
+		END CATEGORY ;; HardeningCat
+
+	END CATEGORY ;; InternetExplorer
+
+END CATEGORY ;; WindowsComponents
+
+[strings]
+
+Admin_Hardening="Enhance Internet Explorer Security for Admin accounts on the machine"
+User_Hardening="Enhance Internet Explorer Security for User accounts on the machine"
+Per_User_Hardening="Per_User_Hardening"
+Per_Machine_Hardening="Per Machine Hardening"
+WindowsComponents="Windows Components"
+InternetExplorer="Internet Explorer"
+HardeningCat="Enhanced Security Configuration"
+
+README=Group Policy users: click here and read explanation
+READMEDesc=If you are using the Group Policy editor and wish to view the preferences for the Enhanced security Configuration, you must uncheck the check box for "Only show policy settings that can be fully managed" on the "Filtering..." dialog which you can access from the "View" menu. \n\nAfter you change that setting, the editor will refresh and show preferences below this item to apply the Internet Explorer Enhanced Security Configuration.
+
+
+HardeningDesc=Windows 2003 supports the Internet Explorer Enhanced Security Configuration. You can use this preference template to apply the the Enhanced Security Configuration to machines running Windows 2003 Server. \n\nTo apply the Enhanced Security Configuration to User accounts with Admin and Power User rights, check the first option. To apply the Enhanced Security Configuration to User accounts with Restricted User or Standard User rights, check the second option. To apply the Enhanced Security Configuration to all User accounts on a given machine, check both options. \n\nWhen used with Group Policy, resulting policy objects should only be applied to a server machine Organizational Unit. If it is applied to an Organizational Unit for users, the policy will be written on each server machine that the designated users login to.\n\nNOTE Enhanced Security Configuration will not be applied until the next time the user logs into the machine.
+SUPPORTED_WindowServer2003="Windows Server 2003"
+ADM_TITLE="Group Policy settings for IE Enhanced Security"
+
+
+; These string below are used by Online Help
+
+USER="User Configuration"
+COMPUTER="Computer Configuration"
+cOMPUTER_EXPLAIN="Contains settings that may only be used to configure Computers."
+USER_EXPLAIN="Contains settings that may only be used to configure Users."
+SUPPORTEDON="Requirements:"
+
