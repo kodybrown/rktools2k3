@@ -1,4 +1,4 @@
-resourcekit2013
-===============
+rktools2k3
+==========
 
-The binaries from Windows Server 2013 Resource Kit Tools
+The binaries from Windows Server 2003 Resource Kit Tools
